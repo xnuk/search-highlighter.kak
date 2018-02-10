@@ -27,17 +27,17 @@ hook global WinCreate .* %{
 Commands
 --------
 
-- `search-highlighting-enable`: enable search highlighting
-- `search-highlighting-disable`: disable search highlighting
-- `search-highlighting-selection-enable`: enable main selection highlighting on search overlapping
-- `search-highlighting-selection-disable`: disable main selection highlighting on search overlapping
+- `search-highlighting-enable`: Enable search highlighting
+- `search-highlighting-disable`: Disable search highlighting
+- `search-highlighting-selection-enable`: Enable main selection highlighting on search overlapping
+- `search-highlighting-selection-disable`: Disable main selection highlighting on search overlapping
 
 Faces
 -----
 
-- `Search` `white,yellow`: search face
-- `PrimarySelectionSearch` `white,red`: main selection face when overlapping search
-- `PrimarySelectionDefault` `white,blue`: main selection face – work-around missing `%face{<name>}`
+- `Search` `white,yellow`: Search face
+- `PrimarySelectionSearch` `white,red`: Main selection face when overlapping search
+- `PrimarySelectionDefault` `white,blue`: Main selection face – Work-around missing `%face{<name>}`
 
 [Kakoune]: http://kakoune.org
 [freenode/kakoune]: https://webchat.freenode.net?channels=kakoune
