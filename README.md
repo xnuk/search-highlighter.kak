@@ -1,6 +1,13 @@
+Search highlighting
+===================
+
 [![IRC][IRC Badge]][IRC]
 
-[Kakoune][] extension for search highlighting.
+###### [Usage](#usage) | [Documentation](#commands) | [Contributing](CONTRIBUTING)
+
+> [Kakoune][] extension for search highlighting.
+
+###### What can I do?
 
 Enable search highlighting in context of search.
 
