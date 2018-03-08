@@ -5,15 +5,7 @@ Search highlighting
 
 ###### [Usage](#usage) | [Documentation](#commands) | [Contributing](CONTRIBUTING)
 
-> [Kakoune][] extension for search highlighting.
-
-###### What can I do?
-
-Enable search highlighting in context of search.
-
-Press <kbd>Escape</kbd> to disable search highlighting.
-
-Search highlighting is re-enabled when you are searching.
+> A smart search highlighter for [Kakoune][], enabled in context of search.
 
 Installation
 ------------
@@ -30,6 +22,18 @@ hook global WinCreate .* %{
   search-highlighting-enable
 }
 ```
+
+- Search for a word to see the highlighter.
+- Press <kbd>Escape</kbd> to disable highlighting.
+- Press <kbd>n</kbd> or a search command to re-enable highlighting.
+
+``` kak
+hook global WinCreate .* %{
+  search-highlighting-selection-enable
+}
+```
+
+Change the primary selection face when overlapping a search occurence.
 
 Commands
 --------
