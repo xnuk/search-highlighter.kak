@@ -1,5 +1,4 @@
-Search highlighting
-===================
+# Search highlighting
 
 [![IRC][IRC Badge]][IRC]
 
@@ -7,15 +6,13 @@ Search highlighting
 
 > A smart search highlighter for [Kakoune][], enabled in context of search.
 
-Installation
-------------
+## Installation
 
 ``` sh
 ln --symbolic $PWD/rc $XDG_CONFIG_HOME/kak/autoload/search-highlighting
 ```
 
-Usage
------
+## Usage
 
 ``` kak
 hook global WinCreate .* %{
@@ -35,16 +32,14 @@ hook global WinCreate .* %{
 
 Change the primary selection face when overlapping a search occurence.
 
-Commands
---------
+## Commands
 
 - `search-highlighting-enable`: Enable search highlighting
 - `search-highlighting-disable`: Disable search highlighting
 - `search-highlighting-selection-enable`: Enable main selection highlighting on search overlapping
 - `search-highlighting-selection-disable`: Disable main selection highlighting on search overlapping
 
-Faces
------
+## Faces
 
 - `Search` `white,yellow`: Search face
 - `PrimarySelectionSearch` `white,red`: Main selection face when overlapping search
