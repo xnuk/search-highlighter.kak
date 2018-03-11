@@ -23,14 +23,7 @@ hook global WinCreate .* %{
 - Search for a word to see the highlighter.
 - Press <kbd>Escape</kbd> to disable highlighting.
 - Press <kbd>n</kbd> or a search command to re-enable highlighting.
-
-``` kak
-hook global WinCreate .* %{
-  search-highlighting-selection-enable
-}
-```
-
-Change the primary selection face when overlapping a search occurence.
+- You can see the primary selection face is highlighted differently when overlapping a search occurence.
 
 ## Commands
 
