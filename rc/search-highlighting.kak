@@ -1,6 +1,6 @@
-set-face Search white,yellow
-set-face PrimarySelectionSearch white,red
-set-face PrimarySelectionDefault white,blue
+set-face global Search white,yellow
+set-face global PrimarySelectionSearch white,red
+set-face global PrimarySelectionDefault white,blue
 
 define-command search-highlighting-enable -docstring 'Enable search highlighting' %{
   hook window -group search-highlighting NormalKey [/?*nN]|<a-[/?*nN]> %{ try %{
@@ -26,18 +26,18 @@ define-command search-highlighting-selection-enable -docstring 'Enable main sele
         try %{
           set-register X %reg{/}
           execute-keys -draft -no-hooks <a-k>\A<c-r>X\z<ret>
-          set-face PrimarySelection PrimarySelectionSearch
+          set-face global PrimarySelection PrimarySelectionSearch
         } catch %{
-          set-face PrimarySelection PrimarySelectionDefault
+          set-face global PrimarySelection PrimarySelectionDefault
         }
       '
     else
-      echo set-face PrimarySelection PrimarySelectionDefault
+      echo set-face global PrimarySelection PrimarySelectionDefault
     fi
   }}
 }
 
 define-command search-highlighting-selection-disable -docstring 'Disable main selection highlighting on search overlapping' %{
   remove-hooks window search-highlighting-selection
-  set-face PrimarySelection PrimarySelectionDefault
+  set-face global PrimarySelection PrimarySelectionDefault
 }
