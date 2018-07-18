@@ -4,24 +4,24 @@ set-face global PrimarySelectionDefault white,blue
 
 define-command search-highlighting-enable -docstring 'Enable search highlighting' %{
   hook window -group search-highlighting NormalKey [/?*nN]|<a-[/?*nN]> %{ try %{
-    add-highlighter window dynregex '%reg{/}' 0:Search
+    add-highlighter window/ dynregex '%reg{/}' 0:Search
     search-highlighting-selection-enable
   }}
   hook window -group search-highlighting NormalKey <esc> %{ try %{
-    remove-highlighter window/dynregex_%reg{<slash>}
+    remove-highlighter window/dynregex<slash>%reg{<slash>}<slash>0:Search
     search-highlighting-selection-disable
   }}
 }
 
 define-command search-highlighting-disable -docstring 'Disable search highlighting' %{
-  remove-highlighter window/dynregex_%reg{<slash>}
+  remove-highlighter window/dynregex<slash>%reg{<slash>}<slash>0:Search
   remove-hooks window search-highlighting
   search-highlighting-selection-disable
 }
 
 define-command search-highlighting-selection-enable -docstring 'Enable main selection highlighting on search overlapping' %{
-  hook window -group search-highlighting-selection NormalIdle .* %{ %sh{
-    if test -n "$kak_reg_slash"; then
+  hook window -group search-highlighting-selection NormalIdle .* %{ evaluate-commands %sh{
+    if test -n "$kak_main_reg_slash"; then
       echo '
         try %{
           set-register X %reg{/}
