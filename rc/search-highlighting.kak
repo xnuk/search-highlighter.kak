@@ -4,17 +4,17 @@ set-face global PrimarySelectionDefault white,blue
 
 define-command search-highlighting-enable -docstring 'Enable search highlighting' %{
   hook window -group search-highlighting NormalKey [/?*nN]|<a-[/?*nN]> %{ try %{
-    add-highlighter window/ dynregex '%reg{/}' 0:Search
+    add-highlighter window/search dynregex '%reg{/}' 0:Search
     search-highlighting-selection-enable
   }}
   hook window -group search-highlighting NormalKey <esc> %{ try %{
-    remove-highlighter window/dynregex<slash>%reg{<slash>}<slash>0:Search
+    remove-highlighter window/search
     search-highlighting-selection-disable
   }}
 }
 
 define-command search-highlighting-disable -docstring 'Disable search highlighting' %{
-  remove-highlighter window/dynregex<slash>%reg{<slash>}<slash>0:Search
+  remove-highlighter window/search
   remove-hooks window search-highlighting
   search-highlighting-selection-disable
 }
