@@ -4,7 +4,7 @@
 
 ###### [Usage](#usage) | [Documentation](#commands) | [Contributing](CONTRIBUTING)
 
-> A smart search highlighter for [Kakoune][], enabled in context of search.
+> A smart search highlighter for [Kakoune], enabled in context of search.
 
 ## Installation
 
