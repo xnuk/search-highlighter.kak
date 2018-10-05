@@ -8,8 +8,10 @@
 
 ## Installation
 
-``` sh
-ln --symbolic $PWD/rc $XDG_CONFIG_HOME/kak/autoload/search-highlighting
+### [Pathogen]
+
+``` kak
+pathogen-infect /home/user/repositories/github.com/alexherbo2/search-highlighting.kak
 ```
 
 ## Usage
@@ -41,3 +43,4 @@ hook global WinCreate .* %{
 [Kakoune]: http://kakoune.org
 [IRC]: https://webchat.freenode.net?channels=kakoune
 [IRC Badge]: https://img.shields.io/badge/IRC-%23kakoune-blue.svg
+[Pathogen]: https://github.com/alexherbo2/pathogen.kak
