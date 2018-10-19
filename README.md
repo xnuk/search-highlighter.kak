@@ -1,4 +1,4 @@
-# Search highlighting
+# Search highlighter
 
 [![IRC][IRC Badge]][IRC]
 
@@ -11,14 +11,14 @@
 ### [Pathogen]
 
 ``` kak
-pathogen-infect /home/user/repositories/github.com/alexherbo2/search-highlighting.kak
+pathogen-infect /home/user/repositories/github.com/alexherbo2/search-highlighter.kak
 ```
 
 ## Usage
 
 ``` kak
 hook global WinCreate .* %{
-  search-highlighting-enable
+  search-highlighter-enable
 }
 ```
 
@@ -29,10 +29,10 @@ hook global WinCreate .* %{
 
 ## Commands
 
-- `search-highlighting-enable`: Enable search highlighting
-- `search-highlighting-disable`: Disable search highlighting
-- `search-highlighting-selection-enable`: Enable main selection highlighting on search overlapping
-- `search-highlighting-selection-disable`: Disable main selection highlighting on search overlapping
+- `search-highlighter-enable`: Enable search highlighter
+- `search-highlighter-disable`: Disable search highlighter
+- `search-highlighter-selection-enable`: Enable main selection highlighting on search overlapping
+- `search-highlighter-selection-disable`: Disable main selection highlighting on search overlapping
 
 ## Faces
 
