@@ -25,7 +25,7 @@ define-command search-highlighter-selection-enable -docstring 'Enable main selec
       echo '
         try %{
           set-register X %reg{/}
-          execute-keys -draft -no-hooks <a-k>\A<c-r>X\z<ret>
+          execute-keys -draft <a-k>\A<c-r>X\z<ret>
           set-face global PrimarySelection PrimarySelectionSearch
         } catch %{
           set-face global PrimarySelection PrimarySelectionDefault
