@@ -40,7 +40,7 @@ hook global WinCreate .* %{
 - `PrimarySelectionSearch` `white,red`: Main selection face when overlapping search
 - `PrimarySelectionDefault` `white,blue`: Main selection face – Work-around missing `%face{<name>}`
 
-[Kakoune]: http://kakoune.org
+[Kakoune]: https://kakoune.org
 [IRC]: https://webchat.freenode.net?channels=kakoune
 [IRC Badge]: https://img.shields.io/badge/IRC-%23kakoune-blue.svg
 [Pathogen]: https://github.com/alexherbo2/pathogen.kak
