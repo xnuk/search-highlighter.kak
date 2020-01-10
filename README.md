@@ -1,4 +1,4 @@
-# Search highlighter
+# search-highlighter
 
 [![IRC][IRC Badge]][IRC]
 
