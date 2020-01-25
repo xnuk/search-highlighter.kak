@@ -1,3 +1,7 @@
+hook global ModuleLoaded search-highlighter %{
+  search-highlighter-enable
+}
+
 provide-module search-highlighter %{
   set-face global Search +u
   add-highlighter shared/search dynregex '%reg{/}' 0:Search
@@ -6,17 +10,17 @@ provide-module search-highlighter %{
   }
   define-command search-highlighter-disable -docstring 'Disable search-highlighter' %{
     search-highlighter-down
-    remove-hooks window search-highlighter
+    remove-hooks global search-highlighter
   }
   define-command -hidden search-highlighter-up %{
-    add-highlighter window/search ref search
-    hook -once -group search-highlighter window NormalKey '<esc>' %{
+    add-highlighter global/search ref search
+    hook -once -group search-highlighter global NormalKey '<esc>' %{
       search-highlighter-down
     }
   }
   define-command -hidden search-highlighter-down %{
-    remove-highlighter window/search
-    hook -once -group search-highlighter window NormalKey '[/?*nN]|<a-[/?*nN]>' %{
+    remove-highlighter global/search
+    hook -once -group search-highlighter global NormalKey '[/?*nN]|<a-[/?*nN]>' %{
       search-highlighter-up
     }
   }

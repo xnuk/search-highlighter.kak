@@ -8,16 +8,8 @@ Add [`search-highlighter.kak`](rc/search-highlighter.kak) to your autoload or so
 
 ## Usage
 
-Enable search highlighting in the current window with `search-highlighter-enable`.
+Enable search highlighting (enabled by default) with `search-highlighter-enable`.
 Press <kbd>Escape</kbd> to temporarily disable highlighting, or call `search-highlighter-disable` for permanent effect.
 You can configure the `Search` face to your liking, which by default displays your search underlined.
-
-## Configuration
-
-``` kak
-hook global WinCreate .* %{
-  search-highlighter-enable
-}
-```
 
 [Kakoune]: https://kakoune.org
