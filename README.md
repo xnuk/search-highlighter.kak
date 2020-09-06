@@ -8,7 +8,13 @@ Search highlighter for [Kakoune].
 
 Add [`search-highlighter.kak`](rc/search-highlighter.kak) to your autoload or source it manually.
 
+``` kak
+require-module search-highlighter
+```
+
 ## Usage
+
+Enable search-highlighter with `search-highlighter-enable`.
 
 Search something, press <kbd>Escape</kbd> to disable highlighting.
 

@@ -1,7 +1,3 @@
-hook global ModuleLoaded search-highlighter %{
-  search-highlighter-enable
-}
-
 provide-module search-highlighter %{
   # Faces
   set-face global Search +u
@@ -41,5 +37,3 @@ provide-module search-highlighter %{
     }
   }
 }
-
-require-module search-highlighter
