@@ -35,5 +35,10 @@ provide-module search-highlighter %{
     hook -once -group search-highlighter global NormalKey '[/?*nN]|<a-[/?*nN]>' %{
       search-highlighter-show
     }
+
+    # Show when search register has been modified
+    hook -once -group search-highlighter global RegisterModified '/' %{
+      search-highlighter-show
+    }
   }
 }
