@@ -1,6 +1,6 @@
 provide-module search-highlighter %{
   # Faces
-  set-face global Search +u
+  set-face global Search black,yellow+uf
 
   # Highlighters
   add-highlighter shared/search dynregex '%reg{/}' 0:Search
