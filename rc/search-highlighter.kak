@@ -19,7 +19,7 @@ provide-module search-highlighter %{
 
   # Show
   define-command -hidden search-highlighter-show %{
-    add-highlighter global/search ref search
+    add-highlighter -override global/search ref search
 
     # Hide on Escape
     hook -once -group search-highlighter global NormalKey '<esc>' %{
