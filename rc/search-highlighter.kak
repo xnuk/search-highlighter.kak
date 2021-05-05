@@ -3,9 +3,12 @@ provide-module search-highlighter %{
   set-face global Search black,yellow+uf
 
   # Highlighters
-  hook global RegisterModified '/' %{
-    add-highlighter -override shared/search regex "%reg{/}" 0:Search
-  }
+  add-highlighter shared/search dynregex '%reg{/}' 0:Search
+
+  # Revert the use of `RegisterModified` hook for performance reasons.
+  # hook global RegisterModified '/' %{
+  #   add-highlighter -override shared/search regex "%reg{/}" 0:Search
+  # }
 
   # Commands
   # Enable
